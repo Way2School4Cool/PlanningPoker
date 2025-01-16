@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planning Poker - Session</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Planning Poker - Session</h1>
+    <div id="serverMessage"></div>
+    
+    <div class="game-container">
+        <div class="lists-container">
+            <div class="players-list">
+                <h3>Players</h3>
+                <div id="playersList"></div>
+            </div>
+            
+            <div class="observers-list">
+                <h3>Observers</h3>
+                <div id="observersList"></div>
+            </div>
+        </div>
+        
+        <div class="card-selection">
+            <button class="poker-card" onclick="submitEstimate('1')">1</button>
+            <button class="poker-card" onclick="submitEstimate('2')">2</button>
+            <button class="poker-card" onclick="submitEstimate('3')">3</button>
+            <button class="poker-card" onclick="submitEstimate('5')">5</button>
+            <button class="poker-card" onclick="submitEstimate('8')">8</button>
+            <button class="poker-card" onclick="submitEstimate('13')">13</button>
+            <button class="poker-card" onclick="submitEstimate('?')">?</button>
+        </div>
+
+        <div class="controls">
+            <button class="control-button" onclick="clearVotes()">Clear Votes</button>
+            <button class="control-button" onclick="showVotes()">Show Votes</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html> 
