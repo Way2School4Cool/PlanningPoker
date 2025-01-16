@@ -21,6 +21,11 @@ function connectWebSocket(username, role) {
             console.log("Sending join message:", msg);
             socket.send(JSON.stringify(msg));
 
+            // Show welcome modal when connecting
+            if (window.location.pathname === '/game.html') {
+                showWelcomeModal();
+            }
+
             // Add automatic navigation after sending join message
             if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
                 window.location.href = '/game.html';
@@ -185,3 +190,17 @@ window.onload = function() {
         console.log("No stored username found");
     }
 };
+
+function showWelcomeModal() {
+    const modal = document.getElementById('welcomeModal');
+    if (modal) {
+        modal.style.display = "block";
+    }
+}
+
+function closeWelcomeModal() {
+    const modal = document.getElementById('welcomeModal');
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
